@@ -1,0 +1,9 @@
+# Windows
+Thumbs.db
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+
+# Linux
+.directory

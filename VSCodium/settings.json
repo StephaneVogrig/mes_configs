@@ -1,0 +1,80 @@
+{
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "workbench.editorAssociations": {
+        "*.pdf": "pdf.preview"
+    },
+    "breadcrumbs.enabled": false,
+    "files.autoSave": "afterDelay",
+    "files.eol": "\n",
+    "workbench.colorTheme": "Visual Studio Dark",
+    "explorer.confirmDragAndDrop": false,
+    "[powershell]": {
+        "files.encoding": "utf8bom"
+    },
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.autoSaveDelay": 500,
+    "git.confirmSync": false,
+    "editor.tokenColorCustomizations": {
+    "textMateRules": [
+        {
+            "name": "Fonctions et Méthodes",
+            "scope": [
+                "entity.name.function.php",
+                "support.function.array.php",
+                "meta.function-call.php",
+                "support.function.construct.output.php"
+            ],
+            "settings": {
+                "foreground": "#569CD6"
+            }
+        },
+        {
+            "name": "Mots-clés (if, else, return, public, private)",
+            "scope": [
+                "keyword.control.php",
+                "keyword.operator.logical.php",
+                "storage.type.function.php",
+                "keyword.control.if.php",
+                "keyword.control.else.php",
+                "keyword.operator.key.php",
+                "keyword.operator.null-coalescing.php",
+                "punctuation.separator.delimiter.php"
+            ],
+            "settings": {
+                "foreground": "#C586C0"
+            }
+        },
+        {
+            "name": "Variables PHP ($variable)",
+            "scope": [
+                "variable.other.php",
+            ],
+            "settings": {
+                "foreground": "#fdd275"
+            }
+        },
+        {
+            "name": "Constante",
+            "scope": [
+                "support.constant.core.php",
+                "constant.other.php",
+            ],
+            "settings": {
+                "foreground": "#7fdbf7"
+            }
+        },
+        {
+            "name": "Classe",
+            "scope": [
+                "entity.name.type.class.php",
+                "support.class.builtin.php"
+            ],
+            "settings": {
+                "foreground": "#faa321"
+            }
+        },
+    ]
+}
+}

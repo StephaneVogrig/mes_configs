@@ -1,0 +1,57 @@
+# Normaliser tous les fichiers texte en LF
+* text=auto eol=lf
+
+# Code
+*.php text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.sql text eol=lf
+*.xml text eol=lf
+*.json text eol=lf
+*.sh text eol=lf
+
+# Scripts Windows
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Configuration
+*.ini text eol=lf
+*.conf text eol=lf
+*.{yml,yaml} text eol=lf
+.htaccess text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.env text eol=lf
+Dockerfile text eol=lf
+
+# Documentation
+*.{md,MD} text eol=lf
+*.{txt,TXT} text eol=lf
+
+# Images
+*.{png,PNG} binary
+*.{jpg,JPG} binary
+*.{jpeg,JPEG} binary
+*.{gif,GIF} binary
+*.{webp,WEBP} binary
+*.{ico,ICO} binary
+*.{svg,SVG} text eol=lf
+
+# Documents
+*.{pdf,PDF} binary
+
+# Archives
+*.{zip,ZIP} binary
+*.{tar,TAR} binary
+*.{gz,GZ} binary
+*.{rar,RAR} binary
+*.{7z,7Z} binary
+
+# Polices
+*.{woff,WOFF} binary
+*.{woff2,WOFF2} binary
+*.{ttf,TTF} binary
+*.{eot,EOT} binary
+*.{otf,OTF} binary
