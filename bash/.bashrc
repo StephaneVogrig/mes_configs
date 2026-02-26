@@ -56,15 +56,22 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+git_branch() {
+	local b=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null)
+	[ -n "$b" ] && echo "($b)"
+}
+
+remote() {
+	if [ -n "$SSH_CONNECTION" ]; then
+		echo -ne " ${USER}@${HOSTNAME}:"
+	fi
 }
 
 if [ "$color_prompt" = yes ]; then
     # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1='\[\033[33m\]\t \[\033[32m\]\h \[\033[35m\]\w \[\033[36m\]$(parse_git_branch)\[\033[32m\]\$ \[\033[00m\]'
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[33m\]\t\[\033[01;32m\]$(remote)\[\033[35m\]\w\[\033[36m\]$(git_branch)\[\033[32m\]\$ \[\033[00m\]'
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\t$(remote)\w\$(git_branch)$ '
 fi
 unset color_prompt force_color_prompt
 
