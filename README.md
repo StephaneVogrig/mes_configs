@@ -1,2 +1,4 @@
-# dotfile
-dotfile
+# Mes Configurations
+* .bashrc
+* powershell
+* VSCodium
