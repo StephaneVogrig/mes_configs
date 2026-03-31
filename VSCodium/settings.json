@@ -4,7 +4,6 @@
     "workbench.editorAssociations": {
         "*.pdf": "pdf.preview"
     },
-    "breadcrumbs.enabled": false,
     "files.autoSave": "afterDelay",
     "files.eol": "\n",
     "workbench.colorTheme": "Visual Studio Dark",
@@ -19,6 +18,24 @@
     "editor.tokenColorCustomizations": {
     "textMateRules": [
         {
+            "settings": {
+                "foreground": "#fdd275"
+            },
+        },
+        {
+            "settings": {
+                "foreground": "#faa321"
+            }
+        },
+        {
+            "name": "Fonctions et Méthodes",
+            "scope": [
+            ],
+            "settings": {
+                "foreground": "#569CD6"
+            }
+        },
+        {
             "name": "Fonctions et Méthodes",
             "scope": [
                 "entity.name.function.php",
@@ -27,7 +44,7 @@
                 "support.function.construct.output.php"
             ],
             "settings": {
-                "foreground": "#569CD6"
+                "foreground": "#fdd275"
             }
         },
         {
@@ -35,9 +52,10 @@
             "scope": [
                 "keyword.control.php",
                 "keyword.operator.logical.php",
-                "storage.type.function.php",
+                "storage.modifier.php",
                 "keyword.control.if.php",
                 "keyword.control.else.php",
+                "keyword.control.elseif.php",
                 "keyword.operator.key.php",
                 "keyword.operator.null-coalescing.php",
                 "punctuation.separator.delimiter.php"
@@ -50,9 +68,10 @@
             "name": "Variables PHP ($variable)",
             "scope": [
                 "variable.other.php",
+                "variable.other.class.php",
             ],
             "settings": {
-                "foreground": "#fdd275"
+                "foreground": "#fd7575"
             }
         },
         {
@@ -60,6 +79,7 @@
             "scope": [
                 "support.constant.core.php",
                 "constant.other.php",
+                "constant.other.class.php"
             ],
             "settings": {
                 "foreground": "#7fdbf7"
@@ -69,7 +89,8 @@
             "name": "Classe",
             "scope": [
                 "entity.name.type.class.php",
-                "support.class.builtin.php"
+                "support.class.builtin.php",
+                "support.class.php"
             ],
             "settings": {
                 "foreground": "#faa321"
