@@ -3,4 +3,15 @@ devsense.composer-php-vscode
 devsense.intelli-php-vscode
 devsense.phptools-vscode
 devsense.profiler-php-vscode
+dokca.42-ft-count-line
+donjayamanne.githistory
+html-validate.vscode-html-validate
+jeanp413.open-remote-wsl
+kube.42header
+ms-python.debugpy
+ms-python.python
+ms-python.vscode-python-envs
+ms-vscode.cpptools-themes
 takumii.markdowntable
+tomoki1207.pdf
+xdebug.php-debug
