@@ -8,11 +8,11 @@ Ce dossier contient les fichiers de synchronisation pour **VSCodium**. L'utilisa
 
 Les fichiers de configurations de VSCodium se trouvent habituellement dans les dossiers suivants :
 
-| Système | Chemin du dossier User |
-| :--- | :--- |
-| Windows | %APPDATA%\VSCodium\User\ |
-| Linux / WSL2 | ~/.config/VSCodium/User/ |
-| macOS | ~/Library/Application Support/VSCodium/User/ |
+| Système      | Chemin du dossier User                       |
+| :----------- | :------------------------------------------- |
+| Windows      | %APPDATA%\VSCodium\User\                     |
+| Linux / WSL2 | ~/.config/VSCodium/User/                     |
+| macOS        | ~/Library/Application Support/VSCodium/User/ |
 
 ---
 
@@ -61,8 +61,30 @@ New-Item -ItemType SymbolicLink -Path "snippets" -Value "C:\<REPO_PATH>\vscodium
 ```
 
 ---
+## Extensions
+
+### Récupérer la liste des extensions installées
+Dans un terminal :
+```bash
+codium --list-extensions > extensions.txt
+```
+
+### Importer et réinstaller les extensions
+
+Sous linux/macOS :
+```bash
+cat extensions.txt | xargs -L 1 codium --install-extension
+```
+Sous Windows (PowerShell) :
+
+```powershell
+Get-Content extensions.txt | ForEach-Object { codium --install-extension $_ }
+```
+Si la commande codium n'est pas reconnue, vous pouvez l'activer depuis VSCodium en ouvrant la Palette de commandes Ctrl+Shift+P ou Cmd+Shift+P, puis en cherchant : Shell Command: Install 'codium' command in PATH.
+
+---
 
 ## 📝 Contenu du dossier
 * settings.json : Préférences globales, thème et configuration des extensions.
 * keybindings.json : Raccourcis clavier personnalisés.
-* snippets/ : Dossier contenant vos extraits de code par langage.
+* extensions.txt : liste des extensions
